@@ -9,3 +9,6 @@ The snake game
 5. いつものように Eclipse で clone する
 6. 定義を追加する
 7. いつものように Eclipse で commit & push する
+8. https://github.com/自分のアカウント/2020-snake を開く
+9. "This branch is X commit ahead of p2titech:main. "のようなメッセージの右に Pull request と書いてあるのでそれをクリックする
+10. 出てきた指示に従って完了する
