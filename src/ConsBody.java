@@ -7,6 +7,10 @@ public class ConsBody implements IBody {
 		this.fst = fst;
 		this.rest = rest;
 	}
+	
+	public IBody move(CartPt c) {
+		return new ConsBody(c, rest.move(fst));
+	}
 
 	@Override
 	public int hashCode() {

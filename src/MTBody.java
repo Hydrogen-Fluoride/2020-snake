@@ -1,7 +1,11 @@
 /** an empty body of snake */
 public class MTBody implements IBody {
 	MTBody() {}
-
+	
+	public IBody move(CartPt c) {
+		return new MTBody();
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

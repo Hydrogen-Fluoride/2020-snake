@@ -14,7 +14,19 @@ public class Snake {
 		this.body = body;
 		this.d = d;
 	}
-
+	//return moved snake for a direction 
+  public Snake move(){
+	  /*
+	   * this.head // CartPt
+	   * this.body // Ibody
+	   * this.d // IDirection
+	   */
+	  return new Snake(
+//			  this.d.move(this.head)
+			  this.head.move(this.d),
+			  this.body.move(this.head), 
+			  this.d);
+  }
 	
 	
 	@Override
