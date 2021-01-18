@@ -16,10 +16,6 @@ public class SnakeWorldExamples {
 	Snake s2 = new Snake(new CartPt(5,1), b2, new DirDown());
 	SnakeWorld w2 = new SnakeWorld(s2);
 	
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testMove() {

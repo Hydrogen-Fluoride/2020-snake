@@ -1,6 +1,15 @@
 /** upward direction */
 public class DirUp implements IDirection {
 	DirUp(){}
+	@Override
+	public int deltaX() {
+		return 0;
+	}
+
+	@Override
+	public int deltaY() {
+		return -1;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -12,4 +21,5 @@ public class DirUp implements IDirection {
 			return false;
 		return true;
 	}
+
 }

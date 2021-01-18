@@ -1,5 +1,8 @@
 /** a body of snake */
 public interface IBody {
-	// this‚ğc‚É˜A‚È‚éIBody‚ÆŒ©‚½‚Æ‚«ˆê‚Â“®‚©‚µ‚Ä‚©‚¦‚·
-	public IBody move(CartPt c);
+	// thisã‚’cã«é€£ãªã‚‹IBodyã¨è¦‹ãŸã¨ãä¸€ã¤å‹•ã‹ã—ã¦ã‹ãˆã™
+	// to move this body at the given position; 
+	// i.e., to create a body beginning at the given position,
+	// followed by this body excluding the last position.
+	public IBody move(CartPt position);
 }

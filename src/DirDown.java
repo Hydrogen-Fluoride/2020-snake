@@ -3,6 +3,16 @@ public class DirDown implements IDirection {
 	DirDown(){}
 
 	@Override
+	public int deltaX() {
+		return 0;
+	}
+
+	@Override
+	public int deltaY() {
+		return 1;
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -12,4 +22,5 @@ public class DirDown implements IDirection {
 			return false;
 		return true;
 	}
+
 }

@@ -22,7 +22,11 @@ public class CartPt {
 		return y;
 	}
 
-	
+	// to move this point one step towards the given direction
+	public CartPt move(IDirection direction) {
+		return new CartPt(this.x + direction.deltaX(),
+							this.y + direction.deltaY());
+	}	
 	
 	
 	@Override
@@ -49,5 +53,6 @@ public class CartPt {
 			return false;
 		return true;
 	}
+
 
 }

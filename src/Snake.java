@@ -14,21 +14,15 @@ public class Snake {
 		this.body = body;
 		this.d = d;
 	}
-	//return moved snake for a direction 
-  public Snake move(){
-	  /*
-	   * this.head // CartPt
-	   * this.body // Ibody
-	   * this.d // IDirection
-	   */
-	  return new Snake(
-//			  this.d.move(this.head)
-			  this.head.move(this.d),
-			  this.body.move(this.head), 
-			  this.d);
-  }
-	
-	
+
+	// to move this snake towards its own direction
+	public Snake move() {
+		return new Snake(
+				this.head.move(this.d),// alterantive: this.d.move(this.head)
+				this.body.move(this.head), 
+				this.d);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

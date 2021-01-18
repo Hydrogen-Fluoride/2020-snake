@@ -1,6 +1,15 @@
 /** left direction */
 public class DirLeft implements IDirection {
 	DirLeft(){}
+	@Override
+	public int deltaX() {
+		return -1;
+	}
+
+	@Override
+	public int deltaY() {
+		return 0;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -12,4 +21,5 @@ public class DirLeft implements IDirection {
 			return false;
 		return true;
 	}
+
 }
