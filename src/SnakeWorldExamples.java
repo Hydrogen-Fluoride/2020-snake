@@ -1,7 +1,7 @@
 import static org.junit.Assert.fail;
 import org.junit.Test;
 
-class SnakeWorldExamples {
+public class SnakeWorldExamples {
 	IBody b1 = 
 			new ConsBody(new CartPt(4,1), 
 			new ConsBody(new CartPt(3,1), new MTBody()) );
@@ -16,7 +16,7 @@ class SnakeWorldExamples {
 	SnakeWorld w2 = new SnakeWorld(s2);
 	
 	@Test
-	void test() {
+	public void test() {
 		fail("Not yet implemented");
 	}
 
