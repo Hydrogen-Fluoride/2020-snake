@@ -12,3 +12,9 @@ The snake game
 8. https://github.com/自分のアカウント/2020-snake を開く
 9. "This branch is X commit ahead of p2titech:main. "のようなメッセージの右に Pull request と書いてあるのでそれをクリックする
 10. 出てきた指示に従って完了する
+
+## Tasks
+蛇ゲームのために必要となる以下のメソッドを作れ
+a) 蛇を現在の進行方向に1升進める
+b) 与えられた位置の升目に蛇の体節があるかを判定する (蛇の頭が自分自身の体節に衝突するとゲーム終了)
+c) 蛇を画面上に描画する
