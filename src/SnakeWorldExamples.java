@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import draw.Canvas;
+
 // examples of the snake games
 public class SnakeWorldExamples {
 	IBody b1 = 
@@ -37,5 +39,15 @@ public class SnakeWorldExamples {
 	public void testIsBodyAt() {
 		assertEquals(false, s1.isBodyAt(new CartPt(0,0)));
 		assertEquals(true,  s1.isBodyAt(new CartPt(3,1)));
+	}
+	
+	@Test
+	public void testDraw() {
+		Canvas c = new Canvas(500,500);
+		assertEquals(true, c.show());
+		assertEquals(true, w1.draw(c));
+		assertEquals(true, c.pause("snake world 1"));
+		assertEquals(true, w2.draw(c));
+		assertEquals(true, c.pause("snake world 2"));
 	}
 }

@@ -1,4 +1,5 @@
 import colors.*;
+import draw.*;
 
 /** the world of the snake game */
 public class SnakeWorld {
@@ -12,8 +13,10 @@ public class SnakeWorld {
 		this.s = s;
 	}
 	
-	
-	
+	// to draw this snake world on the given canvas c
+	boolean draw(Canvas c) {
+		
+	}
 	
 	
 	
