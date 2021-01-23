@@ -32,4 +32,10 @@ public class SnakeWorldExamples {
 		Snake s2After = new Snake(new CartPt(5,2), b2After, new DirDown());
 		assertEquals(s2After, s2.move());
 	}
+	
+	@Test
+	public void testIsBodyAt() {
+		assertEquals(false, s1.isBodyAt(new CartPt(0,0)));
+		assertEquals(true,  s1.isBodyAt(new CartPt(3,1)));
+	}
 }
