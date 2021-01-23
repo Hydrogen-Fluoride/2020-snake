@@ -43,7 +43,7 @@ public class SnakeWorldExamples {
 	
 	@Test
 	public void testDraw() {
-		Canvas c = new Canvas(500,500);
+		Canvas c = new Canvas(600,600);
 		assertEquals(true, c.show());
 		assertEquals(true, w1.draw(c));
 		assertEquals(true, c.pause("snake world 1"));

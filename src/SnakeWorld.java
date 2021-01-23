@@ -7,6 +7,7 @@ public class SnakeWorld {
 	// Apples a;
 	int WIDTH = 30;
 	int HEIGHT = 30;
+	int CELL_SIZE = 20;
 	IColor BACK_COLOR = new Blue();
 	public SnakeWorld(Snake s) {
 		super();
@@ -15,16 +16,15 @@ public class SnakeWorld {
 	
 	// to draw this snake world on the given canvas c
 	boolean draw(Canvas c) {
-		
+		return this.drawBackground(c) &&
+				this.s.draw(c, this.CELL_SIZE);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	// to draw the background of this snake world on the given canvas c
+	private boolean drawBackground(Canvas c) {
+		return c.drawRect(new CartPt(0,0).toPosn(), this.WIDTH*this.CELL_SIZE, this.HEIGHT*this.CELL_SIZE, this.BACK_COLOR);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

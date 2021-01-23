@@ -1,4 +1,5 @@
 import colors.*;
+import draw.Canvas;
 
 /** a snake */
 public class Snake {
@@ -31,6 +32,12 @@ public class Snake {
 		return this.body.isNodeAt(location);
 	}
 
+	// to draw this snake on the given canvas c
+	public boolean draw(Canvas c, int cell_size) {
+		return c.drawDisk(this.head.scale(cell_size).shift(cell_size/2,  cell_size/2).toPosn(),
+				cell_size/2, this.HEAD_COLOR) &&
+				this.body.draw(c, cell_size, this.BODY_COLOR);
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -67,4 +74,5 @@ public class Snake {
 			return false;
 		return true;
 	}
+
 }

@@ -1,3 +1,6 @@
+import colors.IColor;
+import draw.Canvas;
+
 /** an empty body of snake */
 public class MTBody implements IBody {
 	MTBody() {}
@@ -20,5 +23,10 @@ public class MTBody implements IBody {
 	@Override
 	public boolean isNodeAt(CartPt location) {
 		return false;
+	}
+
+	@Override
+	public boolean draw(Canvas c, int cell_size, IColor color) {
+		return true;
 	}
 }

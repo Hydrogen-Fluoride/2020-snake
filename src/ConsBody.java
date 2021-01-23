@@ -1,3 +1,6 @@
+import colors.*;
+import draw.*;
+
 /** a node added to a snake body */
 public class ConsBody implements IBody {
 	CartPt fst;
@@ -18,6 +21,13 @@ public class ConsBody implements IBody {
 		// this.rest CartPt
 		return this.fst.equals(location) ||
 				this.rest.isNodeAt(location);
+	}
+
+	@Override
+	public boolean draw(Canvas c, int cell_size, IColor color) {
+		return c.drawDisk(this.fst.scale(cell_size).shift(cell_size/2,  cell_size/2).toPosn(),
+				cell_size/2, color) &&
+				this.rest.draw(c, cell_size, color);
 	}
 
 	@Override
