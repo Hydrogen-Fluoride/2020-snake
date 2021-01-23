@@ -16,4 +16,9 @@ public class MTBody implements IBody {
 			return false;
 		return true;
 	}
+
+	@Override
+	public boolean isNodeAt(CartPt location) {
+		return false;
+	}
 }

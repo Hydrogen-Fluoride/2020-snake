@@ -28,6 +28,7 @@ public class Snake {
 		//this.head   CartPt
 		//this.body   IBody
 		//this.d      IDirection
+		return this.body.isNodeAt(location);
 	}
 
 	@Override

@@ -13,6 +13,14 @@ public class ConsBody implements IBody {
 	}
 
 	@Override
+	public boolean isNodeAt(CartPt location) {
+		// this.fst CartPt
+		// this.rest CartPt
+		return this.fst.equals(location) ||
+				this.rest.isNodeAt(location);
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -42,4 +50,5 @@ public class ConsBody implements IBody {
 			return false;
 		return true;
 	}
+
 }
