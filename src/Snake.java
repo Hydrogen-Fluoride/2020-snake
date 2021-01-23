@@ -22,6 +22,13 @@ public class Snake {
 				this.body.move(this.head), 
 				this.d);
 	}
+	
+	// to determine whether the given location is occupied by a part of this body
+	boolean isBodyAt(CartPt location) {
+		//this.head   CartPt
+		//this.body   IBody
+		//this.d      IDirection
+	}
 
 	@Override
 	public int hashCode() {
