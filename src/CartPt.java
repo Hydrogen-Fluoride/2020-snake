@@ -3,7 +3,7 @@ import geometry.Posn;
 /** a position of elements in the game */
 public class CartPt {
 	int x; // number of cells, from left
-	int y; // number of cells, from upward
+	int y; // number of cells, from top
 
 	CartPt(int x, int y) {
 		this.x = x;

@@ -15,7 +15,7 @@ public class SnakeWorld {
 	}
 	
 	// to draw this snake world on the given canvas c
-	boolean draw(Canvas c) {
+	boolean drawAll(Canvas c) {
 		return this.drawBackground(c) &&
 				this.s.draw(c, this.CELL_SIZE);
 	}
