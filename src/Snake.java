@@ -31,6 +31,21 @@ public class Snake {
 		//this.d      IDirection
 		return this.body.isNodeAt(location);
 	}
+	
+	// change direction
+	Snake changeDirection(IDirection d) {
+		return new Snake(head, body, d);	
+	}
+	
+	// this が壁と衝突しているかどうかを判定する
+	boolean onCollisionWall(int width, int height) {
+		//this.head CartPt
+		//this.body IBody
+		//this.d    IDirection
+		int x = this.head.getX();
+		int y = this.head.getY();
+		return (x < 0) || (width-1 < x) || (y < 0) || (height-1 < y);
+	}
 
 	// to draw this snake on the given canvas c
 	public boolean draw(Canvas c, int cell_size) {

@@ -2,11 +2,11 @@ import colors.*;
 import draw.*;
 
 /** the world of the snake game */
-public class SnakeWorld {
+public class SnakeWorld extends World{
 	Snake s;
 	// Apples a;
-	int WIDTH = 30;
-	int HEIGHT = 30;
+	int WIDTH = 10;
+	int HEIGHT = 10;
 	int CELL_SIZE = 20;
 	IColor BACK_COLOR = new Blue();
 	public SnakeWorld(Snake s) {
@@ -59,5 +59,51 @@ public class SnakeWorld {
 		} else if (!s.equals(other.s))
 			return false;
 		return true;
+	}
+
+	// thisからs秒後のSnakeWorldを返す
+	public World onTick() {
+		// this.s // snake
+		// this.WIDTH // int
+		// this.HEIGHT // int
+		// this.a //Apple
+		Snake nextS = this.s.move();
+		if (nextS.onCollisionWall(this.WIDTH, this.HEIGHT)) {
+			return this.endOfWorld("Gave over");
+		} else {
+			return new SnakeWorld(this.s.move());
+		}
+	}
+
+	@Override
+	public World onKeyEvent(String key) {
+		// TODO Auto-generated method stub
+		Snake s = this.s;
+		IDirection l = new DirLeft();
+		IDirection r = new DirRight();
+		IDirection u = new DirUp();
+		IDirection d = new DirDown();
+		if (key.equals("LEFT")) {
+			Snake newS = s.changeDirection(l);
+			return new SnakeWorld(newS);
+		}
+		else if (key.equals("RIGHT")) {
+			Snake newS = s.changeDirection(r);
+			return new SnakeWorld(newS);
+		}
+		else if (key.equals("UP")) {
+			Snake newS = s.changeDirection(u);
+			return new SnakeWorld(newS);
+		}
+		else if (key.equals("DOWN")) {
+			Snake newS = s.changeDirection(d);
+			return new SnakeWorld(newS);
+		}
+		return this;
+	}
+
+	// thisの表すSnakeWorldを描画する
+	public boolean draw() {
+		return this.drawAll(this.theCanvas);
 	}
 }
